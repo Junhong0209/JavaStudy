@@ -6,7 +6,6 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
 	
-	@SuppressWarnings("resource")
 	public static void main(String[] args) throws InterruptedException {
 			
 		PhoneBook phoneBook = new DBPhoneBook();
@@ -31,6 +30,7 @@ public class Main {
 			switch (num1) {
 				case 0: {
 					System.out.println("프로그램을 종료합니다.");
+					scan.close();
 					System.exit(0);
 				}
 				case 1: {
